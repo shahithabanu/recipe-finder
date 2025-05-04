@@ -131,55 +131,54 @@ body {
   background-color: #ff3b3b;
 }
 
-  
-  .card-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 items in one row */
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .card {
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.2s;
-  }
-  
-  .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .card h3 {
-    font-size: 18px;
-    color: #333;
-    margin: 10px 0;
-  }
-  
-  .card-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .card-buttons button {
-    background-color: #ff7f7f;
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .card-buttons button:hover {
-    background-color: #ff4c4c;
-  }
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive layout */
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+}
+
+.card h3 {
+  padding: 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.card-buttons button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #ff6b6b;
+  color: white;
+  transition: background 0.3s;
+}
+
+.card-buttons button:hover {
+  background-color: #ff4b4b;
+}
+
   
   .heart-btn.active {
     color: red;
@@ -204,6 +203,17 @@ body {
     text-align: center;
     padding: 50px;
     font-size: 24px;
+  }
+  
+  @media (max-width: 500px) {
+    .card h3 {
+      font-size: 16px;
+    }
+  
+    .card-buttons button {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
   }
   
   .alert {
